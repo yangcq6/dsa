@@ -49,11 +49,19 @@ public class TestFib {
         return b;
     }
 
+    // 特征方程
+    public static int f5(int n) {
+        double c = Math.sqrt(5);
+        return (int) (((Math.pow((1 + c) / 2, n)) - (Math.pow((1 - c) / 2, n))) / c);
+    }
+
     public static void main(String[] args) {
-        int n = 48;
+        // n=47超出int范围
+        int n = 46;
         // System.out.println(f2(n));
         // System.out.println(f1(n));
 
+        System.out.println(f5(n));
 
         Times.test("f4", new Times.Task() {
             @Override
